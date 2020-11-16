@@ -41,7 +41,7 @@ public class Server implements Runnable
             
             String mensaje= flujoentrada.readUTF();
             
-            System.out.println("Mensaje cliente: "+mensaje);
+            System.out.println("Mensaje cliente: "+mensaje.toString());
             
             misocket.close();
             }

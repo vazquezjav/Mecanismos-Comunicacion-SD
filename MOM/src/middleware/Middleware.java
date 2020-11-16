@@ -20,13 +20,14 @@ public class Middleware implements Runnable {
 		System.out.println("Middleware activo");
 		try {
 
-			ServerSocket cola = new ServerSocket(9990);
+			ServerSocket cola = new ServerSocket(9991);
 			Hashtable<String, Integer> datos = new Hashtable<>();
 			while (true) {
 				Socket misocket = cola.accept();
 				DataInputStream flujoentrada = new DataInputStream(misocket.getInputStream());
 				String mensaje = flujoentrada.readUTF();
 
+				
 				datos.put(mensaje, 0);
 				System.out.println(datos.toString());
 				envioserver(datos);
