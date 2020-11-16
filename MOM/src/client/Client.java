@@ -16,7 +16,7 @@ public class Client {
                       
                       //Mensaje envia al server
                       flujoSalida.writeUTF(mensaje);
-                      System.out.println("conexion exitosa");
+                      System.out.println("envio exitoso");
                       flujoSalida.close();
               
                      

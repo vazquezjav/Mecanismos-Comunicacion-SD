@@ -18,4 +18,5 @@ public interface InterfaceRemote extends Remote {
     // INTERFAZ REMOTA
     public String ejemplo(String input) throws RemoteException;
     public int suma(int a, int b) throws RemoteException;
+    public String validarCedula(String cedula) throws RemoteException;
 }

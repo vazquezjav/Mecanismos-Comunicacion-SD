@@ -36,7 +36,9 @@ public class RMI {
         */
         InterfaceRemote service = (InterfaceRemote) Naming.lookup("rmi://localhost:5099/hello");
         System.out.println("--- "+service.ejemplo("servidor")+" "+service.getClass().getName());
-        System.out.println("`---"+service.suma(5, 10)+" "+service.getClass().getName());
+        System.out.println("---"+service.suma(5, 10)+" | "+service.getClass().getName());
+        String cedula="1401277767";
+        System.out.println("--- Cedula: ' "+cedula+" ' es "+service.validarCedula(cedula)+" | "+service.getClass().getName());
     }
     
 }
